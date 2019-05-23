@@ -1,0 +1,138 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Agregar Paciente
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+    <ion-grid>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Nombres</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Apellidos</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Cedula</ion-label>
+                    <ion-input type="number"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Fecha de nacimiento</ion-label>
+                    <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item class="ion-select">
+                    <ion-label>Genero</ion-label>
+                    <ion-select placeholder="Seccionar">
+                        <ion-select-option value="f">Femenino</ion-select-option>
+                        <ion-select-option value="m">Maculino</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">E-mail</ion-label>
+                    <ion-input type="email"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Direccion</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Celular</ion-label>
+                    <ion-input type="number"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item class="ion-select">
+                    <ion-label>Ciudad</ion-label>
+                    <ion-select placeholder="Seccionar">
+                        <ion-select-option value="1">Bogotá</ion-select-option>
+                        <ion-select-option value="2">Medellin</ion-select-option>
+                        <ion-select-option value="3">Pereira</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item class="ion-select">
+                    <ion-label>RH</ion-label>
+                    <ion-select placeholder="Seccionar">
+                        <ion-select-option value="O-">O-</ion-select-option>
+                        <ion-select-option value="O+">O+</ion-select-option>
+                        <ion-select-option value="B-">B-</ion-select-option>
+                        <ion-select-option value="B+">B+</ion-select-option>
+                        <ion-select-option value="A-">A-</ion-select-option>
+                        <ion-select-option value="A+">A+</ion-select-option>
+                        <ion-select-option value="AB-">AB-</ion-select-option>
+                        <ion-select-option value="AB+">AB+</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Peso</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-button expand="block" fill="outline" routerLink="/home">Guardar</ion-button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>
