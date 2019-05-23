@@ -1,0 +1,40 @@
+img {
+    width: 150px;
+}
+
+h3 {
+    color: white;
+}
+
+.top-20 {
+    margin-top: 20%;
+}
+
+.cj-login {
+    margin-top: 17%;
+}
+
+.cj-login ion-input {
+    background-color: #f4f5f8;
+    border-radius: 40px;
+    --padding-start: 18px;
+}
+
+.cj-login ion-button {
+    color: #fff;
+    --border-color: initial;
+    --border-radius: 30px;
+}
+
+.cj-login ion-label {
+    text-align: center;
+    color: #fff;
+}
+
+.google {
+    --background: #dd4b39;
+}
+
+.facebook {
+    --background: #3b5998;
+}

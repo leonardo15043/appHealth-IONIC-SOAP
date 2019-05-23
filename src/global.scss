@@ -9,3 +9,17 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+.fn-login {
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #1B567B), color-stop(1, #341A4A));
+    background-image: -o-linear-gradient(bottom, #F4554F 0%, #b3323e 100%);
+    background-image: -moz-linear-gradient(bottom, #F4554F 0%, #b3323e 100%);
+    background-image: -webkit-linear-gradient(bottom, #F4554F 0%, #b3323e 100%);
+    background-image: -ms-linear-gradient(bottom, #F4554F 0%, #b3323e 100%);
+    background-image: linear-gradient( to bottom, #F4554F 0%, #b3323e 100%);
+    --background: initial !important;
+    height: 100%;
+}
+
+.fn-login ion-content {
+    --background: initial;
+}
