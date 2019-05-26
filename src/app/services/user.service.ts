@@ -28,7 +28,7 @@ export class UserService {
 
   addUser( data ) {
 
-    const body = {
+    const body: any = {
       name: data.name,
       lastname: data.lastname,
       identification: data.identification,
@@ -37,9 +37,19 @@ export class UserService {
       email: data.email,
       address: data.address,
       city: data.city,
-      user_type:1,
-      password: Md5.hashStr(data.password),
+      user_type: data.user_type,
+      password: '',
+      cel: data.cel,
+      rh: data.rh
     };
+
+    if (data.password) {
+      body.password = Md5.hashStr(data.password);
+    }
+
+    if (data.rh) {
+      body.rh = data.rh;
+    }
 
     return this.userData.call('addUser', body);
 

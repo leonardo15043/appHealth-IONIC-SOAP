@@ -23,6 +23,7 @@ export class RegistryPage implements OnInit {
   }
 
   register() {
+    this.user.user_type = 1;
     this.userService.addUser(this.user).subscribe(res => {
       this.alertsModule.confirmationAlert('', 'Usuario creado correctamente', '/home');
       this.authService.getLogin( this.user );

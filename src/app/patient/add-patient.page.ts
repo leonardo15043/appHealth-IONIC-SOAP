@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
+import { AlertsModule } from '../alerts/alerts.module';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-add-patient',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPatientPage implements OnInit {
 
-  constructor() { }
+  user: any = {};
+
+  constructor(
+    public userService: UserService,
+    public alertsModule: AlertsModule,
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
+  }
+
+  register() {
+    this.user.user_type = 2;
+
+    this.userService.addUser(this.user).subscribe(res => {
+      this.alertsModule.confirmationAlert('', 'Paciente creado correctamente', '');
+    }, err => {
+      this.alertsModule.confirmationAlert('Error', 'Ocurrio un error , intente mas tarde', '');
+    });
   }
 
 }

@@ -31,6 +31,12 @@
 
                 <ion-row>
                     <ion-col>
+                        <ion-input type="number" name="identification" name="cel" [(ngModel)]="user.cel" placeholder="Celular"></ion-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
                         <ion-datetime display-format="MMM DD, YYYY HH:mm" name="birthdate" [(ngModel)]="user.birthdate" placeholder="Fecha de nacimiento"></ion-datetime>
                     </ion-col>
                 </ion-row>
