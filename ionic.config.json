@@ -1,5 +1,7 @@
 {
   "name": "apphealth",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

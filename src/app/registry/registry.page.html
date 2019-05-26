@@ -7,86 +7,91 @@
         <h3 text-center>
             Regístrate
         </h3>
-        <div class="cj-registry">
-            <ion-row>
-                <ion-col>
-                    <ion-input type="text" placeholder="Nombres"></ion-input>
-                </ion-col>
-            </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-input type="text" placeholder="Apellidos"></ion-input>
-                </ion-col>
-            </ion-row>
+        <form (ngSubmit)="register()">
 
-            <ion-row>
-                <ion-col>
-                    <ion-input type="number" placeholder="Cedula"></ion-input>
-                </ion-col>
-            </ion-row>
+            <div class="cj-registry">
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="text" name="name" [(ngModel)]="user.name" placeholder="Nombres"></ion-input>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-datetime display-format="MMM DD, YYYY HH:mm" placeholder="Fecha de nacimiento"></ion-datetime>
-                </ion-col>
-            </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="text" name="lastname" [(ngModel)]="user.lastname" placeholder="Apellidos"></ion-input>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-item class="ion-select">
-                        <ion-label>Genero</ion-label>
-                        <ion-select placeholder="Seccionar">
-                            <ion-select-option value="f">Femenino</ion-select-option>
-                            <ion-select-option value="m">Maculino</ion-select-option>
-                        </ion-select>
-                    </ion-item>
-                </ion-col>
-            </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="number" name="identification" [(ngModel)]="user.identification" placeholder="Cedula"></ion-input>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-input type="email" placeholder="E-mail"></ion-input>
-                </ion-col>
-            </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-datetime display-format="MMM DD, YYYY HH:mm" name="birthdate" [(ngModel)]="user.birthdate" placeholder="Fecha de nacimiento"></ion-datetime>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-input type="text" placeholder="Direccion"></ion-input>
-                </ion-col>
-            </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item class="ion-select">
+                            <ion-label>Genero</ion-label>
+                            <ion-select placeholder="Seccionar" name="gender" [(ngModel)]="user.gender">
+                                <ion-select-option value="f">Femenino</ion-select-option>
+                                <ion-select-option value="m">Maculino</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-item class="ion-select">
-                        <ion-label>Ciudad</ion-label>
-                        <ion-select placeholder="Seccionar">
-                            <ion-select-option value="1">Bogotá</ion-select-option>
-                            <ion-select-option value="2">Medellin</ion-select-option>
-                            <ion-select-option value="3">Pereira</ion-select-option>
-                        </ion-select>
-                    </ion-item>
-                </ion-col>
-            </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="email" placeholder="E-mail" name="email" [(ngModel)]="user.email"></ion-input>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-input type="password" placeholder="Password"></ion-input>
-                </ion-col>
-            </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="text" placeholder="Direccion" name="address" [(ngModel)]="user.address"></ion-input>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row>
-                <ion-col>
-                    <ion-button expand="block" fill="outline" routerLink="/home">Enviar</ion-button>
-                </ion-col>
-            </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item class="ion-select">
+                            <ion-label>Ciudad</ion-label>
+                            <ion-select placeholder="Seccionar" name="city" [(ngModel)]="user.city">
+                                <ion-select-option value="1">Bogotá</ion-select-option>
+                                <ion-select-option value="2">Medellin</ion-select-option>
+                                <ion-select-option value="3">Pereira</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
 
-            <ion-row padding text-center>
-                <ion-col>
-                    <ion-label routerLink="/login">Ingresar</ion-label>
-                </ion-col>
-            </ion-row>
-        </div>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password"></ion-input>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <ion-button type="submit" expand="block" fill="outline">Enviar</ion-button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row padding text-center>
+                    <ion-col>
+                        <ion-label routerLink="/login">Ingresar</ion-label>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+        </form>
 
     </ion-grid>
 
