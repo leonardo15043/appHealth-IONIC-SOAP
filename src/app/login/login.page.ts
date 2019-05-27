@@ -11,7 +11,7 @@ import { AlertsModule } from '../alerts/alerts.module';
 export class LoginPage implements OnInit {
 
   user: any = {}
-  message: string;
+  message: any;
   xmlResponse: string;
 
   constructor(
@@ -32,6 +32,7 @@ export class LoginPage implements OnInit {
       if (this.message.status == 200) {
         localStorage.setItem('email', this.user.email);
         localStorage.setItem('password', this.user.password );
+        this.user.password = '';
         this.alertsModule.confirmationAlert('', this.message.msg, '/home');
       } else {
         this.alertsModule.confirmationAlert('Error', this.message.msg, '');

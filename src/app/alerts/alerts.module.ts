@@ -27,7 +27,7 @@ export class AlertsModule {
     setTimeout(() => {
       alert.dismiss();
       if ( $redirect != '') {
-        this.router.navigateByUrl($redirect);
+        this.router.navigate([$redirect]);
       }
     }, 2000);
 

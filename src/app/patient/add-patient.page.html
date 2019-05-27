@@ -3,14 +3,17 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>
+        <ion-title *ngIf="id == 'new'">
             Agregar Paciente
+        </ion-title>
+        <ion-title *ngIf="id != 'new'">
+            Editar Paciente
         </ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content overflow-scroll="true">
 
-    <form (ngSubmit)="register()">
+    <form (ngSubmit)="save()">
         <ion-grid>
 
             <ion-row>

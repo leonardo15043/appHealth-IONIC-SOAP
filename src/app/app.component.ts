@@ -17,7 +17,7 @@ export class AppComponent {
       icon: 'home'
     }, {
       title: 'Agregar Paciente',
-      url: '/add-patient',
+      url: '/add-patient/new',
       icon: 'person-add'
     }, {
       title: 'Lista de Pacientes',

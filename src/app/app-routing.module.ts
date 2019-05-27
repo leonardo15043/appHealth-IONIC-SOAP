@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' , canActivate: [OutsideGuard]  },
   { path: 'registry', loadChildren: './registry/registry.module#RegistryPageModule' , canActivate: [LoginGuard]  },
-  { path: 'add-patient', loadChildren: './patient/add-patient.module#AddPatientPageModule' , canActivate: [LoginGuard]  },
+  { path: 'add-patient/:id', loadChildren: './patient/add-patient.module#AddPatientPageModule' , canActivate: [LoginGuard]  },
   { path: 'list-patient', loadChildren: './patient/list-patient.module#ListPatientPageModule' , canActivate: [LoginGuard] },
  ];
 

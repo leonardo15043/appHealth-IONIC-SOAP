@@ -12,28 +12,11 @@
 <ion-content padding>
 
     <ion-list>
-
-        <ion-item>
+        <ion-item *ngFor="let item of users">
             <ion-icon name="person" slot="start"></ion-icon>
-            leonrdo
-            <ion-button shape="round" slot="end">Ver</ion-button>
+            {{ item.name }}
+            <ion-button shape="round" slot="end" [routerLink]="['/add-patient', item.id ]">Ver</ion-button>
         </ion-item>
-        <ion-item>
-            <ion-icon name="person" slot="start"></ion-icon>
-            leonrdo
-            <ion-button shape="round" slot="end">Ver</ion-button>
-        </ion-item>
-        <ion-item>
-            <ion-icon name="person" slot="start"></ion-icon>
-            leonrdo
-            <ion-button shape="round" slot="end">Ver</ion-button>
-        </ion-item>
-        <ion-item>
-            <ion-icon name="person" slot="start"></ion-icon>
-            leonrdo
-            <ion-button shape="round" slot="end">Ver</ion-button>
-        </ion-item>
-
     </ion-list>
 
 </ion-content>
