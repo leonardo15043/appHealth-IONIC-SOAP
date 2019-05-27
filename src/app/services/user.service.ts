@@ -97,4 +97,14 @@ export class UserService {
     return this.userData.call('getUser', body);
   }
 
+  getPatientsMonth( id ) {
+
+    const body: any = {
+      id_doctor: id
+    };
+
+    return this.userData.call('patientsMonth', body);
+
+  }
+
 }

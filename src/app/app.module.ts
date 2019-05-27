@@ -11,8 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-
 import { AlertsModule } from './alerts/alerts.module';
+
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AlertsModule } from './alerts/alerts.module';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AlertsModule
+    AlertsModule,
+    ChartsModule
   ],
   providers: [
     StatusBar,
