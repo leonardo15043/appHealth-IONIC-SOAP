@@ -13,6 +13,7 @@ export class HomePage implements OnInit {
   @ViewChild('doughnutCanvas') doughnutCanvas;
   doughnutChart: any;
   datChart: any = {};
+  users: Array<Object> = [];
 
   constructor(
     public userService: UserService,
@@ -37,6 +38,12 @@ export class HomePage implements OnInit {
     this.userService.getPatientsMonth( id ).subscribe(res => {
       this.datChart = JSON.parse(res.result.data.$value);
       this.doughnutChartMethod( this.datChart );
+    }, err => {
+      console.error(err);
+    });
+
+    this.userService.listUser(5).subscribe(res => {
+      this.users = JSON.parse(res.result.data.$value);
     }, err => {
       console.error(err);
     });

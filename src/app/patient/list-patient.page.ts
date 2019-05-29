@@ -35,7 +35,7 @@ export class ListPatientPage  {
 
       const { role, data } = await loading.onDidDismiss();
 
-      this.userService.listUser().subscribe(res => {
+      this.userService.listUser('').subscribe(res => {
         this.users = JSON.parse(res.result.data.$value);
 
       }, err => {

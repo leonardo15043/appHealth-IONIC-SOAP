@@ -82,9 +82,13 @@ export class UserService {
 
   }
 
-  listUser() {
+  listUser( $limit ) {
 
-    return this.userData.call('listUser', Array());
+    const body: any = {
+      limit: $limit
+    };
+
+    return this.userData.call('listUser', body);
 
   }
 
