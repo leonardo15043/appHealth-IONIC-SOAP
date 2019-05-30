@@ -1,7 +1,7 @@
 import { Component , ViewChild, OnInit} from '@angular/core';
 import { Chart } from 'chart.js';
 import { UserService } from '../services/user.service';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController , NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,8 @@ export class HomePage implements OnInit {
 
   constructor(
     public userService: UserService,
-    public loadingController: LoadingController
+    public loadingController: LoadingController,
+    private navCtr: NavController
   ) {}
 
   ngOnInit() {
@@ -91,6 +92,10 @@ export class HomePage implements OnInit {
       }
       },
     });
+  }
+
+  irChat() {
+      this.navCtr.navigateBack( '/chat' );
   }
 
 

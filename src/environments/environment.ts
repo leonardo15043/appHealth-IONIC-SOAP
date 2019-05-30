@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   service: {
     url: 'http://66.97.34.16/web/webservice-server.php?wsdl'
-  }
+  },
+  token: 'f3f6c5d7670b4b958ad5a14a717300cb'
 };
 
 /*

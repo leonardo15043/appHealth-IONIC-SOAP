@@ -1,0 +1,10 @@
+<li class="list-group-item">
+    <!-- <img [src]="message.avatar" class="avatar"/> -->
+    <ion-icon [name]="message.avatar"></ion-icon>
+    <div class="message">
+        {{message.content}}
+    </div>
+    <div class="timeform">
+        <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="timestamp">{{message.timestamp | date : 'dd/MM/yyyy , h:mm a ' }}</span>
+    </div>
+</li>

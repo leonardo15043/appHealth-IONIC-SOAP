@@ -27,3 +27,100 @@
 ion-toolbar .cj-info ion-label {
     width: 89%;
 }
+
+// chat 
+.chatform {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.chatlist {
+    height: 600px;
+    margin-bottom: 87px;
+    overflow-y: scroll;
+}
+
+ul {
+    padding: 0;
+}
+
+ul app-item {
+    width: 80%;
+    border-radius: 9px;
+    margin-top: 37px;
+    -webkit-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.22);
+    -moz-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.22);
+    box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.22);
+}
+
+ul app-item:nth-child(odd) {
+    background: #c32424;
+    display: block;
+    float: right;
+    margin-right: 17px;
+    color: #fff;
+}
+
+ul app-item:nth-child(even) {
+    background: #fff;
+    display: block;
+    float: left;
+    margin-left: 17px;
+    color: #c32424;
+}
+
+.chatform {
+    background-color: #fbfbfd;
+}
+
+.chatcontrol ion-button {
+    width: 100%;
+}
+
+.chatcontrol {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #ffffffb3;
+}
+
+.message {
+    font-size: 1em;
+    font-family: arial;
+}
+
+.timeform {
+    color: #6b6a6a;
+    margin-bottom: -36px;
+    position: static;
+    margin-top: 30px;
+    span {
+        font-size: 14px;
+    }
+}
+
+.avatar {
+    width: 50px;
+    margin-right: 20px;
+}
+
+li.list-group-item {
+    list-style: none;
+    padding: 14px;
+    border-radius: 36px 0px 0px 0px;
+}
+
+.chatcontrol ion-input {
+    background-color: #fff;
+    border: solid 1px #b3b3b3;
+    border-radius: 22px;
+    padding-left: 18px !important;
+    margin: 6px;
+}
+
+.chatlist ion-icon {
+    font-size: 20px;
+    float: left;
+    margin: 5px;
+    margin-right: 10px;
+}

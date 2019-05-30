@@ -1,0 +1,14 @@
+<div class="chatcontrol">
+    <ion-grid>
+        <ion-row>
+            <ion-col size="10">
+                <ion-input type="text" class="form-control chatinput" (keyup.enter)="sendMessage()" [(ngModel)]="message.content"></ion-input>
+            </ion-col>
+            <ion-col size="2">
+                <ion-button (click)="sendMessage()">
+                    <ion-icon name="send"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

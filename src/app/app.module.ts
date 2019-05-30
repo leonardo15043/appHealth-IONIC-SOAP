@@ -10,10 +10,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { AlertsModule } from './alerts/alerts.module';
 
 import { ChartsModule } from 'ng2-charts';
+
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { ChartsModule } from 'ng2-charts';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    HttpModule,
     AlertsModule,
     ChartsModule
   ],

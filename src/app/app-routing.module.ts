@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'registry', loadChildren: './registry/registry.module#RegistryPageModule' , canActivate: [LoginGuard]  },
   { path: 'add-patient/:id', loadChildren: './patient/add-patient.module#AddPatientPageModule' , canActivate: [LoginGuard]  },
   { path: 'list-patient', loadChildren: './patient/list-patient.module#ListPatientPageModule' , canActivate: [LoginGuard] },
+  { path: 'chat', loadChildren: './chatbot/chat/chat.module#ChatPageModule' }
  ];
 
 @NgModule({
