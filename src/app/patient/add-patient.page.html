@@ -10,8 +10,15 @@
             Editar Paciente
         </ion-title>
     </ion-toolbar>
+    <ion-fab vertical="top" horizontal="end" slot="end" *ngIf="id != 'new'" [routerLink]="['/report-patient',id]">
+        <ion-fab-button>
+            <ion-icon name="filing"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-header>
 <ion-content overflow-scroll="true">
+
+
 
     <form (ngSubmit)="save()">
         <ion-grid>

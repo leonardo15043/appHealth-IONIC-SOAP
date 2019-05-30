@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Historial medico
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="(report | json) != ({} | json)">
+
+    <ion-card *ngFor="let item of report">
+        <ion-item>
+            <ion-icon name="folder-open" slot="start"></ion-icon>
+            <ion-label>{{ item.subject }}</ion-label>
+            <ion-button fill="outline" slot="end">{{ item.creation_date }}</ion-button>
+        </ion-item>
+
+        <ion-card-content>
+            {{ item.observation }}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addReport()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

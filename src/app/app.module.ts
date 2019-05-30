@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { AlertsModule } from './alerts/alerts.module';
+import { AddReportPatientPageModule } from './patient/add-report-patient.module';
+
 
 import { ChartsModule } from 'ng2-charts';
 
@@ -29,7 +31,8 @@ import { ChartsModule } from 'ng2-charts';
     HttpClientModule,
     HttpModule,
     AlertsModule,
-    ChartsModule
+    ChartsModule,
+    AddReportPatientPageModule
   ],
   providers: [
     StatusBar,
