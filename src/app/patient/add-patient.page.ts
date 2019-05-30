@@ -36,6 +36,7 @@ export class AddPatientPage implements OnInit {
     if ( this.id == 'new') {
 
       this.user.user_type = 2;
+      this.user.id_doctor = localStorage.getItem('id_doctor');
 
       this.userService.addUser(this.user).subscribe(res => {
         this.alertsModule.confirmationAlert('', 'Paciente creado correctamente', '');

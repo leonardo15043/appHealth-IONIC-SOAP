@@ -9,7 +9,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="(report | json) != ({} | json)">
+<ion-content *ngIf="report.length != 0">
 
     <ion-card *ngFor="let item of report">
         <ion-item>

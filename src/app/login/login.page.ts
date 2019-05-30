@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
       this.xmlResponse = res.responseBody;
 
       if (this.message.status == 200) {
-        localStorage.setItem('id_doctor', this.user.id);
+        localStorage.setItem('id_doctor', this.message.id);
         localStorage.setItem('email', this.user.email);
         localStorage.setItem('password', this.user.password );
         this.user.password = '';

@@ -39,6 +39,7 @@ export class UserService {
       address: data.address,
       city: data.city,
       user_type: data.user_type,
+      id_doctor: 0,
       password: '',
       cel: data.cel,
       rh: data.rh
@@ -50,6 +51,7 @@ export class UserService {
 
     if (data.rh) {
       body.rh = data.rh;
+      body.id_doctor =  Number(localStorage.getItem('id_doctor'));
     }
 
     return this.userData.call('addUser', body);
@@ -85,8 +87,11 @@ export class UserService {
   listUser( $limit ) {
 
     const body: any = {
-      limit: $limit
+      limit: $limit,
+      id_doctor: Number(localStorage.getItem('id_doctor'))
     };
+
+ 
 
     return this.userData.call('listUser', body);
 
@@ -106,6 +111,8 @@ export class UserService {
     const body: any = {
       id_doctor: id
     };
+
+    console.log(body);
 
     return this.userData.call('patientsMonth', body);
 

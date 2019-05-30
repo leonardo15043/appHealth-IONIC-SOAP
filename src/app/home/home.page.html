@@ -20,7 +20,7 @@
         </ion-card-content>
     </ion-card>
 
-    <ion-card>
+    <ion-card *ngIf="users.length != 0">
         <ion-item class="activated">
             <ion-icon name="walk" slot="start"></ion-icon>
             <ion-label>Mis ultimos pacientes</ion-label>

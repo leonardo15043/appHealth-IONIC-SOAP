@@ -22,7 +22,8 @@ export class HomePage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getPatientsMonth(70);
+    let id_doctor =  Number(localStorage.getItem('id_doctor'));
+    this.getPatientsMonth(id_doctor);
   }
 
   async getPatientsMonth( id ) {
